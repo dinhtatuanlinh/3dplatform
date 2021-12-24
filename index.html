@@ -29,7 +29,7 @@
         // Three.js - Load .OBJ ?
         // from https://r105.threejsfundamentals.org/threejs/threejs-load-obj-no-materials.html
 
-
+        var objfile = 'models/Shelby.obj';
         'use strict';
 
         /* global THREE */
@@ -95,7 +95,7 @@
 
             {
                 const objLoader = new THREE.OBJLoader2();
-                objLoader.load('models/abc.obj', (event) => {
+                objLoader.load(objfile, (event) => { // objfile là url tới file obj
                     const root = event.detail.loaderRootNode;
                     scene.add(root);
                 });
